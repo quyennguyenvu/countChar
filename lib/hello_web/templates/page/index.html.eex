@@ -1,0 +1,18 @@
+<section class="phx-hero">
+	<h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
+	<p>Peace of mind from prototype to production</p>
+	<form action="" method="GET">
+		<input type="text" name="url" value="<%= @url %>">
+		<button type="submit">Detach from URL</button>
+	</form>
+</section>
+
+<%= if @map != nil do %>
+<p>COUNT CHARACTERS</p>
+<%= for {ch, cnt} <- @map do %>
+<p>
+	<span><%= ch %>: </span>
+	<span><%= cnt %></span>
+</p>
+<% end %>
+<% end %>
